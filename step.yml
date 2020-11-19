@@ -7,9 +7,9 @@ description: |
   This article is helpful for how to construct OpenVPN server.
   https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04
 
-website: https://github.com/alikayhan/bitrise-step-open-vpn/tree/use_credentials
-source_code_url: https://github.com/alikayhan/bitrise-step-open-vpn/tree/use_credentials
-support_url: https://github.com/alikayhan/bitrise-step-open-vpn/issues
+website: https://github.com/dushantsw/bitrise-step-open-vpn-config-auth
+source_code_url: https://github.com/dushantsw/bitrise-step-open-vpn-config-auth
+support_url: https://github.com/dushantSW/bitrise-step-open-vpn-config-auth/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04

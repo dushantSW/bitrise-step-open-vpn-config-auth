@@ -11,7 +11,7 @@ case "$OSTYPE" in
 
     sed -i '.bak' 's/auth-user-pass/auth-user-pass auth.txt/' /etc/openvpn/client.ovpn
     service openvpn start client > /dev/null 2>&1
-    sleep 20
+    sleep 10
 
     if ifconfig | grep tun0 > /dev/null
     then
@@ -24,13 +24,13 @@ case "$OSTYPE" in
   darwin*)
     echo "Configuring for Mac OS"
 
-    echo ${client_config} | base64 -D -o client.opvn > /dev/null 2>&1
-    echo ${username} | base64 -D -o > auth.txt
-    echo ${password} | base64 -D -o >> auth.txt
+    echo ${client_config} | base64 -D -o client.ovpn > /dev/null 2>&1
+    echo ${username} | base64 -D > auth.txt
+    echo ${password} | base64 -D >> auth.txt
 
-    sed -i '.bak' 's/auth-user-pass/auth-user-pass auth.txt/' /etc/openvpn/client.ovpn
+    sed -i '.bak' 's/auth-user-pass/auth-user-pass auth.txt/' client.ovpn
     sudo openvpn --config client.opvn > /dev/null 2>&1 &
-    sleep 20
+    sleep 10
 
     if ifconfig -l | grep utun0 > /dev/null
     then
