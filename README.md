@@ -27,8 +27,9 @@ An example `.bitrise.secrets.yml` file:
 
 ```
 envs:
-- A_SECRET_PARAM_ONE: the value for secret one
-- A_SECRET_PARAM_TWO: the value for secret two
+- BITRISE_VPN_CONFIG: Base64 encoded OpenVPN config file
+- BITRISE_VPN_USERNAME: Base64 encoded OpenVPN client username
+- BITRISE_VPN_PASSWORD: Base64 encoded OpenVPN client password
 ```
 
 ## How to create your own step
